@@ -25,12 +25,3 @@ function planIsValid(plan) {
     return !!commissionPlans_1.commissionPlans[plan];
 }
 exports.planIsValid = planIsValid;
-// TODOS
-// add docker-compose
-// add db
-// change data return type to be agents with the name and the amount of commission
-// add makefile
-// add docker-compose to stand up locally
-// dynamic type based on how many agents
-// add back yarn
-// add linting

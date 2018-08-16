@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var bignumber_js_1 = __importDefault(require("bignumber.js"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var express_1 = __importDefault(require("express"));
 var controllers_1 = require("./controllers");
@@ -20,6 +19,4 @@ app.use(function (err, req, res, next) {
 app.listen(port, function () {
     console.log("Listening on Port " + port);
 });
-// Configure BigNumber
-bignumber_js_1.default.config({ ROUNDING_MODE: 4 });
 exports.default = app;
