@@ -1,4 +1,5 @@
 import bodyParser from "body-parser";
+import boom from "boom";
 import express from "express";
 
 import {CommissionsController} from "./controllers";
@@ -13,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/commissions", CommissionsController);
 
 // for boom http error handling
-app.use((err: any, req: any, res: any, next: any) => {
+app.use((err: boom, req: express.Request, res: express.Response, next: express.NextFunction) => {
     return res.status(err.output.statusCode).json(err.output.payload);
 });
 

@@ -1,4 +1,12 @@
-export const commissionPlans: any = {
+interface CommissionPlans {
+    [index: string]: Plan;
+}
+
+interface Plan {
+    [index: string]: number;
+}
+
+export const commissionPlans: CommissionPlans = {
     planA: {
         sellingAgent: 0.50,
         superAgent1: 0.05,
