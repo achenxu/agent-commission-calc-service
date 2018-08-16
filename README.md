@@ -67,3 +67,4 @@ docker-compose run web npm test
 * add database
 * add monitoring (e.g., New Relic)
 * add auth
+* add acceptance tests
